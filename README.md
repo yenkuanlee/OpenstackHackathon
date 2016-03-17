@@ -1,6 +1,5 @@
 scale out
-
-$ python control.py $user $passwd $ip
+<file>$ python control.py $user $passwd $ip</file>
 
 
 scale in 
