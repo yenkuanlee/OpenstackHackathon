@@ -3,7 +3,7 @@ import sys
 hostname = sys.argv[1]
 passwd = sys.argv[2]
 ips = sys.argv[3]
-passwd = 'kuan23028004052260'
+passwd = ''
 def GetServerList():
 	try:
 		f = open('servers','r')
