@@ -1,7 +1,9 @@
 from influxdb import InfluxDBClient
 import random
 import sys
-client = InfluxDBClient('172.16.8.5', 8086, 'root', 'root', 'example')
+f = open('master','r')
+master = f.readline().replace("\n","")
+client = InfluxDBClient(master, 8086, 'root', 'root', 'example')
 try:
 	client.create_database('example')
 except:
@@ -27,7 +29,7 @@ def GetJsonArray(num):
 
 J = GetJsonArray(int(sys.argv[1]))
 client.write_points(J)
-print J
+#print J
 
 #client.write_points([DataGeneration(5)])
 
